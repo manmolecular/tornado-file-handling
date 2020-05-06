@@ -1,5 +1,5 @@
 # tornado-file-handling
-Playing around with Tornado and file handling
+:wrench: Playing around with Tornado file handling
 
 ## Run
 ```bash
@@ -9,9 +9,9 @@ python3 server.py
 ```
 
 ## Usage
-Upload file:  
-```bash
-GET /api/file HTTP/1.1
+Upload file (multipart):  
+```
+POST /api/file HTTP/1.1
 Host: localhost:8888
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
@@ -24,19 +24,19 @@ Content-Type: <Content-Type header here>
 ```
   
 List files:  
-```bash
+```
 GET /api/file HTTP/1.1
 Host: localhost:8888
 ```
 
 Get file:  
-```bash
+```
 GET /api/file?filename=example.png HTTP/1.1
 Host: localhost:8888
 ```
   
 Delete file:  
-```bash
+```
 DELETE /api/file?filename=example.png HTTP/1.1
 Host: localhost:8888
 ```
