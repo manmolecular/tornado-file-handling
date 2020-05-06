@@ -112,7 +112,14 @@ class FileHandler(web.RequestHandler):
 
 
 def make_app():
-    return web.Application(handlers=[(r"/api/file", FileHandler),])
+    Config.file_directory.mkdir(parents=True, exist_ok=True)
+    # fmt: off
+    return web.Application(
+        handlers=[
+            (r"/api/file", FileHandler)
+        ]
+    )
+    # fmt: on
 
 
 if __name__ == "__main__":

@@ -16,8 +16,8 @@ Host: localhost:8888
 Content-Type: multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW
 
 ----WebKitFormBoundary7MA4YWxkTrZu0gW
-Content-Disposition: form-data; name="file"; filename="example.png"
-Content-Type: <Content-Type header here>
+Content-Disposition: form-data; name="file"; filename="test.txt"
+Content-Type: text/plain
 
 (data)
 ----WebKitFormBoundary7MA4YWxkTrZu0gW
@@ -31,12 +31,12 @@ Host: localhost:8888
 
 Get file:  
 ```
-GET /api/file?filename=example.png HTTP/1.1
+GET /api/file?filename=test.txt HTTP/1.1
 Host: localhost:8888
 ```
   
 Delete file:  
 ```
-DELETE /api/file?filename=example.png HTTP/1.1
+DELETE /api/file?filename=test.txt HTTP/1.1
 Host: localhost:8888
 ```
